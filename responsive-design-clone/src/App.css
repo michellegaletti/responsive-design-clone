@@ -41,7 +41,26 @@ body {
 }
 
 .navList {
-  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+  text-transform: uppercase;
+  margin: 0;
+  padding-left: 20%;
+  animation-name: show-menu;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  text-transform: uppercase;
 }
 
 .menuBtn {
@@ -54,9 +73,58 @@ body {
   border-radius: 5px;
 }
 
+.hideNav {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+  text-transform: uppercase;
+  margin: 0;
+  padding-left: 20%;
+  animation-name: hide-menu;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show-menu {
+  0% {
+    height: 0px;
+    visibility: hidden;
+  }
+  100% {
+    height: 150px;
+    background-color: #212529;
+    visibility: visible;
+  }
+}
+
+@keyframes hide-menu {
+  0% {
+    height: 150px;
+    background-color: #212529;
+    visibility: visible;
+  }
+  100% {
+    height: 0px;
+    visibility: hidden;
+  }
+}
+
+.fullSizeMenu {
+  display: none;
+}
+
 a {
   text-decoration: none;
   color: white;
+}
+
+a:hover {
+  color: #fed136;
 }
 
 .headerImg {
@@ -65,7 +133,7 @@ a {
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
-  padding-top: 10rem;
+  padding-top: 15rem;
   padding-bottom: 6rem;
   text-align: center;
   color: white;
@@ -146,11 +214,19 @@ a {
     color: #fed136;
   }
 
-  .navList {
+  .fullSizeMenu {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
     min-width: 500px;
+  }
+
+  .navList {
+    display: none;
+  }
+
+  .hideNav {
+    display: none;
   }
 
   .menuBtn {
@@ -173,9 +249,8 @@ a {
   }
 
   .fakeBtn {
-    max-width: 10%;
+    width: 75%;
     margin: 0 auto;
-    padding: 1%;
     font-weight: bolder;
   }
 
