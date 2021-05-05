@@ -1,0 +1,186 @@
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+.navScroll {
+  position: fixed;
+  top: 0px;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.nav {
+  padding: 0.5rem 1rem;
+  background-color: #212529;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: cursive;
+  color: #fed136;
+  font-size: 1.75rem;
+}
+
+.navList {
+  display: none;
+}
+
+.menuBtn {
+  display: block;
+  background-color: #fed136;
+  color: white;
+  font-size: 0.75rem;
+  border: 0;
+  padding: 0.75rem;
+  border-radius: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.headerImg {
+  background-image: url("https://st3.depositphotos.com/12985790/16417/i/600/depositphotos_164175586-stock-photo-wooden-background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  padding-top: 10rem;
+  padding-bottom: 6rem;
+  text-align: center;
+  color: white;
+}
+
+.headerImg h2 {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.headerImg h1 {
+  font-size: 3.25rem;
+  font-weight: 700;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.fakeBtn {
+  background-color: #fed136;
+  padding: 1.25rem 2.5rem;
+  max-width: 50%;
+  margin: 0 auto;
+  margin-top: 5%;
+  font-weight: bolder;
+}
+
+.cardImg {
+  background-color: #fed136;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  padding: 1%;
+}
+
+.card {
+  max-width: 350px;
+  text-align: center;
+}
+
+.serviceCards {
+  display: inline-block;
+}
+
+#services {
+  padding-left: 2%;
+  padding-right: 2%;
+  text-align: center;
+}
+
+.serviceTitle {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.serviceSub {
+  text-align: center;
+  color: #6c757d;
+  margin-bottom: 2%;
+}
+
+@media (min-width: 768px) {
+  .fakeBtn {
+    max-width: fit-content;
+  }
+  #services {
+    text-align: center;
+  }
+  .serviceCards {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 992px) {
+  .title {
+    max-width: 25%;
+    font-family: cursive;
+    color: #fed136;
+  }
+
+  .navList {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    min-width: 500px;
+  }
+
+  .menuBtn {
+    display: none;
+  }
+
+  .headerImg {
+    padding-top: 17rem;
+    padding-bottom: 12.5rem;
+    text-align: center;
+    color: white;
+  }
+
+  .headerImg h2 {
+    font-size: 2.25rem;
+  }
+
+  .headerImg h1 {
+    font-size: 4.5rem;
+  }
+
+  .fakeBtn {
+    max-width: 10%;
+    margin: 0 auto;
+    padding: 1%;
+    font-weight: bolder;
+  }
+
+  .serviceCards {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
